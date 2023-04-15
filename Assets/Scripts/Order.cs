@@ -15,6 +15,6 @@ public class Order : MonoBehaviour
 
     public bool CanBeFulfilled(List<Ingredient> ingredients)
     {
-        return ingredients.Intersect(food.ingredients).Any();
+        return ingredients.Intersect(food.ingredients).Count() == food.ingredients.Count();
     }
 }
