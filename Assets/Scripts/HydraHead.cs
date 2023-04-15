@@ -19,7 +19,7 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
-        spriteShapeController.spline.SetPosition(0, transform.position);
+        //spriteShapeController.spline.SetPosition(0, transform.position);
     }
 
     public void Grab()
