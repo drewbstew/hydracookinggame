@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : MonoBehaviour
+public class Food : ScriptableObject
 {
-    List<Ingredient> ingredients = new List<Ingredient>();
+    public List<Ingredient> ingredients = new List<Ingredient>();
     bool isComplete = false;
 }
