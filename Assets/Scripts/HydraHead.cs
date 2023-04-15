@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -21,6 +22,10 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
+    }
+
+    private void Update()
+    {
         spriteShapeController.spline.SetPosition(1, transform.localPosition);
         bool headFlipped = false;
         if (direction.x > 0 && direction.magnitude > 0.1)

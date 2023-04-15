@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e80865dda794cdab6a24762a1e91ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientType: 1
+  requiresCooking: 0
   isCooked: 0
   cookedVisual: {fileID: 3816618996742249423}
   rawVisual: {fileID: 3816618996742249423}
