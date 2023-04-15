@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587041845}
   - component: {fileID: 587041844}
+  - component: {fileID: 587041846}
   m_Layer: 1
   m_Name: grill
   m_TagString: Untagged
@@ -328,6 +329,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &587041846
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587041843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.29838544}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.8, y: 2.3}
+    newSize: {x: 5.8, y: 2.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.8, y: 1.1607097}
+  m_EdgeRadius: 0
 --- !u!1001 &621993758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1595,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
       propertyPath: ingredients.Array.data[1]
       value: 
-      objectReference: {fileID: 1938667699619474976, guid: 08be83c67771449ecae1da9af877f5d0, type: 3}
+      objectReference: {fileID: 1938667699619474976, guid: 664a94df5550c48ee840aea5026db1c9, type: 3}
     - target: {fileID: 8747058870179081185, guid: 508fea8c02b7f244590fd58118428606, type: 3}
       propertyPath: m_Name
       value: Spawner
