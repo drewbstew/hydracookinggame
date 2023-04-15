@@ -22,12 +22,7 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
-    }
-
-    private void Update()
-    {
-        spriteShapeController.spline.SetPosition(1, transform.localPosition);
-        bool headFlipped = false;
+         bool headFlipped = false;
         if (direction.x > 0 && direction.magnitude > 0.1)
         {
             headFlipped = true;
@@ -41,6 +36,11 @@ public class HydraHead : MonoBehaviour
             return;
         }
         headVisuals.flipX = headFlipped;
+    }
+
+    private void Update()
+    {
+        spriteShapeController.spline.SetPosition(1, transform.localPosition);
 
     }
 
