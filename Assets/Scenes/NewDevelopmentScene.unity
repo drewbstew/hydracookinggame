@@ -724,6 +724,10 @@ PrefabInstance:
       value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 5970801779513769172, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
+      propertyPath: coll
+      value: 
+      objectReference: {fileID: 925240133}
+    - target: {fileID: 5970801779513769172, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: collider
       value: 
       objectReference: {fileID: 925240133}
@@ -1369,6 +1373,10 @@ PrefabInstance:
       value: Boundary (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5970801779513769172, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
+      propertyPath: coll
+      value: 
+      objectReference: {fileID: 2027428279}
+    - target: {fileID: 5970801779513769172, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: collider
       value: 
       objectReference: {fileID: 2027428279}
@@ -1577,6 +1585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
+      propertyPath: ingredients.Array.data[1]
+      value: 
+      objectReference: {fileID: 1938667699619474976, guid: 08be83c67771449ecae1da9af877f5d0, type: 3}
     - target: {fileID: 8747058870179081185, guid: 508fea8c02b7f244590fd58118428606, type: 3}
       propertyPath: m_Name
       value: Spawner
