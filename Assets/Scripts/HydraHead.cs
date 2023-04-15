@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.U2D;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class HydraHead : MonoBehaviour
 {
+    [SerializeField] private SpriteShapeController spriteShapeController;
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;
@@ -17,13 +19,12 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
+        spriteShapeController.spline.SetPosition(0, transform.position);
     }
 
     public void Grab()
     {
-        Debug.Log(transform.position);
         var hit = Physics2D.Raycast(transform.position, -Vector2.up, 5f);
-
         // Grab
         if (hit.collider == null) return;
         grabbedRigidbody = hit.collider.GetComponent<Rigidbody2D>();
@@ -37,10 +38,7 @@ public class HydraHead : MonoBehaviour
 
     public void Release()
     {
-        if (grabbedRigidbody == null)
-        {
-            return;
-        }
+        if (grabbedRigidbody == null)  return;
         
         grabbedRigidbody.transform.parent = originalParent;
         grabbedRigidbody.isKinematic = false;
