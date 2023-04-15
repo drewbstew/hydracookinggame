@@ -7,12 +7,17 @@ public class HydraHead : MonoBehaviour
 {
     [SerializeField] private SpriteShapeController spriteShapeController;
     [SerializeField] private Transform  headOrigin;
+<<<<<<< Updated upstream
     [SerializeField] private SpriteRenderer headVisuals;
+=======
+    [SerializeField] private AudioClip grabbingSound;
+>>>>>>> Stashed changes
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;
     private Rigidbody2D grabbedRigidbody;
     private Transform originalParent;
+    private int currentPlayer = 0;
 
     private void Awake()
     {
@@ -56,6 +61,11 @@ public class HydraHead : MonoBehaviour
         var rigidBodyTransform = grabbedRigidbody.transform;
         originalParent = rigidBodyTransform.parent;
         rigidBodyTransform.parent = transform;
+
+        // Play the current player's grabbing sound
+        AudioSource.PlayClipAtPoint(grabbingSound, transform.position);
+
+  
     }
 
     public void Release()
@@ -69,9 +79,10 @@ public class HydraHead : MonoBehaviour
         originalParent = null;
     }
 
-    public void Initialize()
+    public void Initialize(AudioClip GrabSound)
     {
         spriteShapeController.spline.SetPosition(1, transform.localPosition);
         spriteShapeController.spline.SetPosition(0, headOrigin.localPosition);
+        grabbingSound = GrabSound;
     }
 }
