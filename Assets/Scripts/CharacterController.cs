@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,8 +10,10 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float movementRadius;
     [SerializeField] private Transform neckOrigin;
     [SerializeField] private float radiusForce;
+    [SerializeField] private float disabledTime;
     
     private Controls controls;
+    private bool movementDisabled;
 
     private void Start()
     {
@@ -23,6 +26,8 @@ public class CharacterController : MonoBehaviour
     {
         if (HasReachedLimit())
         {
+            movementDisabled = true;
+            StartCoroutine(EnableMovement());
             hydraHead.MoveHead(hydraHead.CurrentVelocity * -radiusForce);
         }   
 
@@ -33,9 +38,18 @@ public class CharacterController : MonoBehaviour
         {
             hydraHead.Release();
         }
-        
-        var inputValue = controls.Gameplay.Move.ReadValue<Vector2>();
-        hydraHead.MoveHead(inputValue * (Time.deltaTime * movementSpeed));
+
+        if (!movementDisabled)
+        {
+            var inputValue = controls.Gameplay.Move.ReadValue<Vector2>();
+            hydraHead.MoveHead(inputValue * (Time.deltaTime * movementSpeed));
+        }
+    }
+
+    private IEnumerator EnableMovement()
+    {
+        yield return new WaitForSeconds(disabledTime);
+        movementDisabled = false;
     }
 
     private bool HasReachedLimit()
