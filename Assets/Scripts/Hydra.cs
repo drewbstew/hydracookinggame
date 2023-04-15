@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Hydra : MonoBehaviour
 {
-    [SerializeField] private HydraHead headPrefab;
     [SerializeField] private PlayerInputManager playerInputManager;
-    [SerializeField] private Vector2[] playerSpawnPositions;
+    [SerializeField] private Transform[] playerSpawnPositions;
 
 
     private int playerNumber;
@@ -22,7 +22,7 @@ public class Hydra : MonoBehaviour
         var targetSpawnPosition = Vector2.zero;
         if (playerSpawnPositions.Length > playerNumber)
         {
-            targetSpawnPosition = playerSpawnPositions[playerNumber];
+            targetSpawnPosition = playerSpawnPositions[playerNumber].position;
         }
 
         newHead.transform.parent = transform;
