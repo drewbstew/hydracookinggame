@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Order : MonoBehaviour
 {
-    List<Food> order = new List<Food>();
-    bool isComplete = false;
+    public Food food;
+    public bool isComplete = false;
 
-
-    void IsOrderDone(List<Food> order)
+    public Food GetOrder()
     {
-        
+        return food;
     }
 
+    public bool CanBeFulfilled(List<Ingredient> ingredients)
+    {
+        return ingredients.Intersect(food.ingredients).Any();
+    }
 }

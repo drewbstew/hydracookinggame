@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Boundaries : MonoBehaviour
 {
-    public BoxCollider2D collider;
+    public BoxCollider2D coll;
 
     private void Start() {
-        collider.enabled = true;
+        coll.enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

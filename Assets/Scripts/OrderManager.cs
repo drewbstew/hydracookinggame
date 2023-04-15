@@ -8,14 +8,8 @@ public class OrderManager : MonoBehaviour
     public List<Food> listOfOrders = new List<Food>();
 
     // Start is called before the first frame update
-    void Start()
+    public List<Food> GetListOfOrders()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return listOfOrders;
     }
 }
