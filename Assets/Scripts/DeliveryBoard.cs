@@ -54,9 +54,12 @@ public class DeliveryBoard : MonoBehaviour
                 isCooked = true;
             }
 
-            if (currentIngredients.Contains(orderIngredient) && isCooked)
+            var ingredientIsInBoard = currentIngredients.Exists(thisIngredient =>
+                thisIngredient.ingredientType == orderIngredient.ingredientType); 
+
+            if (ingredientIsInBoard && isCooked)
             {
-                textMeshPro.text += "*";
+                textMeshPro.text += "+";
             } 
             textMeshPro.text += "\n";
         }
