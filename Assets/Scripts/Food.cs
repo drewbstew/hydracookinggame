@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    List<Ingredients> ingredients = new List<Ingredients>();
+    List<Ingredient> ingredients = new List<Ingredient>();
     bool isComplete = false;
 }
