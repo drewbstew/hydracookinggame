@@ -5,6 +5,7 @@ using UnityEngine.U2D;
 public class HydraHead : MonoBehaviour
 {
     [SerializeField] private SpriteShapeController spriteShapeController;
+    [SerializeField] private Transform  headOrigin;
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;
@@ -19,7 +20,7 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
-        //spriteShapeController.spline.SetPosition(0, transform.position);
+        spriteShapeController.spline.SetPosition(1, transform.localPosition);
     }
 
     public void Grab()
@@ -43,10 +44,13 @@ public class HydraHead : MonoBehaviour
         grabbedRigidbody.transform.parent = originalParent;
         grabbedRigidbody.isKinematic = false;
         grabbedRigidbody.velocity = rigidbody.velocity;
+        grabbedRigidbody = null;
+        originalParent = null;
     }
 
-    public void Spawn(Vector2 targetSpawnPosition)
+    public void Initialize()
     {
-        transform.position = targetSpawnPosition;
+        spriteShapeController.spline.SetPosition(1, transform.localPosition);
+        spriteShapeController.spline.SetPosition(0, headOrigin.localPosition);
     }
 }
