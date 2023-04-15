@@ -307,9 +307,10 @@ MonoBehaviour:
   playerInput: {fileID: 4665026869142558587}
   hydraHead: {fileID: 5114508779854955810}
   movementSpeed: 2000
-  movementRadius: 3
+  movementRadius: 8
   neckOrigin: {fileID: 4473199478235234801}
-  radiusForce: 0
+  radiusForce: 3
+  disabledTime: 0.3
 --- !u!114 &7742131031572463280
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -20,6 +21,10 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
+    }
+
+    private void Update()
+    {
         spriteShapeController.spline.SetPosition(1, transform.localPosition);
     }
 
