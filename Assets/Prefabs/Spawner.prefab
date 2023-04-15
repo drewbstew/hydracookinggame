@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1397451e305bfcb438c790a22c39b2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredients: []
-  delay_between_spawn_min: 3
-  delay_between_spawn_max: 7
+  ingredients:
+  - {fileID: -3402409118078539664, guid: 6023eddc5455c4eb39a083d5dc1acc6d, type: 3}
+  - {fileID: 1938667699619474976, guid: 664a94df5550c48ee840aea5026db1c9, type: 3}
+  - {fileID: 122993187459595953, guid: 2d70b1959909440f8aafe12a91bbd818, type: 3}
+  delay_between_spawn_min: 2.5
+  delay_between_spawn_max: 5.5

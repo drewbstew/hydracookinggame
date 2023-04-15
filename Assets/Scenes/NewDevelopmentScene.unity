@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: collider
       value: 
       objectReference: {fileID: 925240133}
+    - target: {fileID: 6031634120187153574, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
 --- !u!4 &925240132 stripped
@@ -1594,30 +1598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: delay_between_spawn_max
-      value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: delay_between_spawn_min
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[0]
-      value: 
-      objectReference: {fileID: -3402409118078539664, guid: 6023eddc5455c4eb39a083d5dc1acc6d, type: 3}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[1]
-      value: 
-      objectReference: {fileID: 1938667699619474976, guid: 08be83c67771449ecae1da9af877f5d0, type: 3}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[2]
-      value: 
-      objectReference: {fileID: 122993187459595953, guid: 2d70b1959909440f8aafe12a91bbd818, type: 3}
     - target: {fileID: 8747058870179081185, guid: 508fea8c02b7f244590fd58118428606, type: 3}
       propertyPath: m_Name
       value: Spawner
