@@ -7,8 +7,10 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Rigidbody2D rigidbody;
+    [SerializeField] private Vector2 movementSpeed;
     
     private Controls controls;
+
     private void Start()
     {
         controls = new Controls();
@@ -20,6 +22,6 @@ public class CharacterController : MonoBehaviour
     private void Update()
     {
         var inputValue = controls.Gameplay.Move.ReadValue<Vector2>();
-        rigidbody.AddForce(inputValue);    
+        rigidbody.AddForce(inputValue * Time.deltaTime * movementSpeed);    
     }
 }
