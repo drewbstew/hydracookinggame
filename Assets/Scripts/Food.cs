@@ -8,4 +8,9 @@ public class Food : ScriptableObject
 {
     public List<Ingredient> ingredients = new List<Ingredient>();
     bool isComplete = false;
+
+    public bool Contains(Ingredient item)
+    {
+        return ingredients.Contains(item);
+    }
 }

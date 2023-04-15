@@ -5,10 +5,10 @@ using UnityEngine;
 public class OrderManager : MonoBehaviour
 {
 
-    public List<Food> listOfOrders = new List<Food>();
+    public List<Order> listOfOrders = new List<Order>();
 
     // Start is called before the first frame update
-    public List<Food> GetListOfOrders()
+    public List<Order> GetListOfOrders()
     {
         return listOfOrders;
     }
