@@ -6,6 +6,7 @@ public class HydraHead : MonoBehaviour
 {
     [SerializeField] private SpriteShapeController spriteShapeController;
     [SerializeField] private Transform  headOrigin;
+    [SerializeField] private SpriteRenderer headVisuals;
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;
@@ -21,6 +22,21 @@ public class HydraHead : MonoBehaviour
     {
         rigidbody.AddForce(direction);
         spriteShapeController.spline.SetPosition(1, transform.localPosition);
+        bool headFlipped = false;
+        if (direction.x > 0 && direction.magnitude > 0.1)
+        {
+            headFlipped = true;
+        }
+        else if (direction.x < 0 && direction.magnitude > 0.1)
+        {
+            headFlipped = false;
+        }
+        else if (direction.magnitude < 0.1)
+        {
+            return;
+        }
+        headVisuals.flipX = headFlipped;
+
     }
 
     public void Grab()
