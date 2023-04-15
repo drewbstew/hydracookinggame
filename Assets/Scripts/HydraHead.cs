@@ -44,4 +44,9 @@ public class HydraHead : MonoBehaviour
         grabbedRigidbody.isKinematic = false;
         grabbedRigidbody.velocity = rigidbody.velocity;
     }
+
+    public void Spawn(Vector2 targetSpawnPosition)
+    {
+        transform.position = targetSpawnPosition;
+    }
 }
