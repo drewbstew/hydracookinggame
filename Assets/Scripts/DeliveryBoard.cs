@@ -1,30 +1,69 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DeliveryBoard : MonoBehaviour
 {
+    [SerializeField] private TMP_Text textMeshPro; 
+    
     public OrderManager orderManager;
-    private List<Ingredient> currentIngredients = new List<Ingredient>();
-    bool CanBeFulfilled;
+    private readonly List<Ingredient> currentIngredients = new List<Ingredient>();
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         var ingredient = other.gameObject.GetComponent<Ingredient>();
 
-        if (ingredient==null){return;}
+        if (ingredient == null)
+        {
+            return;
+        }
 
         currentIngredients.Add(ingredient);
+        UpdateUI();
+    }
 
-        List<Order> orderList = new List<Order>();
-        orderList = orderManager.GetListOfOrders();
-        foreach (Order order in orderList)
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        var ingredient = other.gameObject.GetComponent<Ingredient>();
+
+        if (ingredient == null)
         {
-            if (order.CanBeFulfilled(order.GetOrder().ingredients))
+            return;
+        }
+
+        currentIngredients.Remove(ingredient);
+        CanBeFulfilled();
+
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        textMeshPro.text = "";
+        foreach (var orderIngredient in orderManager.CurrentOrder.food.ingredients)
+        {
+            textMeshPro.text += $"{orderIngredient.ingredientType}";
+            var isCooked = false;
+            if (!orderIngredient.requiresCooking)
             {
-                Debug.Log("Order Fulfilled!");
-                CanBeFulfilled = true;
+                isCooked = true;
             }
+            else if (orderIngredient.isCooked)
+            {
+                isCooked = true;
+            }
+
+            if (currentIngredients.Contains(orderIngredient) && isCooked)
+            {
+                textMeshPro.text += "*";
+            } 
+            textMeshPro.text += "\n";
         }
     }
-    
+
+    private bool CanBeFulfilled()
+    {
+        return orderManager.CurrentOrder.CanBeFulfilled(currentIngredients);
+    }
 }

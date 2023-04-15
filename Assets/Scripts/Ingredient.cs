@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
+    public IngredientType ingredientType;
+    public bool requiresCooking;
+    
     public bool isCooked;
     public GameObject cookedVisual;
     public GameObject rawVisual;
@@ -17,10 +18,10 @@ public class Ingredient : MonoBehaviour
 
     public void Cook()
     {
+        if (!requiresCooking) return;
+        
         isCooked = true;
         cookedVisual.SetActive(true);
         rawVisual.SetActive(false);
     }
 }
-
-
