@@ -784,10 +784,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7280039028437289753, guid: 06849f81c34894bbfaa5ffccbdd310e9, type: 3}
-      propertyPath: movementSpeed
-      value: 2000
-      objectReference: {fileID: 0}
     - target: {fileID: 5295294860831196977, guid: 06849f81c34894bbfaa5ffccbdd310e9, type: 3}
       propertyPath: m_Name
       value: Head
@@ -798,11 +794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870520624293108808, guid: 06849f81c34894bbfaa5ffccbdd310e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7870520624293108808, guid: 06849f81c34894bbfaa5ffccbdd310e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7870520624293108808, guid: 06849f81c34894bbfaa5ffccbdd310e9, type: 3}
       propertyPath: m_LocalPosition.z
