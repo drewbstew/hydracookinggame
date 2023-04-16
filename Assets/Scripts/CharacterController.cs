@@ -28,7 +28,8 @@ public class CharacterController : MonoBehaviour
         {
             movementDisabled = true;
             StartCoroutine(EnableMovement());
-            hydraHead.MoveHead(hydraHead.CurrentVelocity * -radiusForce);
+            var dir = (hydraHead.transform.position - neckOrigin.position).normalized;
+            hydraHead.MoveHead(dir * -radiusForce);
         }   
 
         if (controls.Gameplay.Grab.IsPressed())

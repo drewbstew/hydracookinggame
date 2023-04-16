@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 968165525}
   - component: {fileID: 968165524}
   - component: {fileID: 968165523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Conveyor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 784140830}
   - component: {fileID: 784140829}
   - component: {fileID: 784140828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Conveyor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1888842999937966186, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.63
+      value: -13.42
       objectReference: {fileID: 0}
     - target: {fileID: 1888842999937966186, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1629,6 +1629,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751999576}
     m_Modifications:
+    - target: {fileID: 4188282391290295949, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 1865123998}
     - target: {fileID: 7172059414773341417, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1785,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1888842999937966186, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.56
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 1888842999937966186, guid: 2504457d07c9a3d489fa929dec88481f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2067,6 +2071,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751999576}
     m_Modifications:
+    - target: {fileID: 4188282391290295949, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 1865123998}
     - target: {fileID: 7172059414773341417, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
       propertyPath: m_RootOrder
       value: 2

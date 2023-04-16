@@ -55,29 +55,32 @@ public class PrepPlate : MonoBehaviour
             return;
         }
         
-        // textMeshPro.text = "";
-        // foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
-        // {
-        //     textMeshPro.text += $"{orderIngredient.ingredientType}";
-        //     var isCooked = false;
-        //     if (!orderIngredient.requiresCooking)
-        //     {
-        //         isCooked = true;
-        //     }
-        //     else if (orderIngredient.isCooked)
-        //     {
-        //         isCooked = true;
-        //     }
-        //
-        //     var ingredientIsInBoard = currentIngredients.Exists(thisIngredient =>
-        //         thisIngredient.ingredientType == orderIngredient.ingredientType); 
-        //
-        //     if (ingredientIsInBoard && isCooked)
-        //     {
-        //         textMeshPro.text += "+";
-        //     } 
-        //     textMeshPro.text += "\n";
-        // }
+        Debug.Log("-------------------------");
+        var text = "";
+        foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
+        {
+            text += $"{orderIngredient.ingredientType}";
+            var isCooked = false;
+            if (!orderIngredient.requiresCooking)
+            {
+                isCooked = true;
+            }
+            else if (orderIngredient.isCooked)
+            {
+                isCooked = true;
+            }
+        
+            var ingredientIsInBoard = currentIngredients.Exists(thisIngredient =>
+                thisIngredient.ingredientType == orderIngredient.ingredientType); 
+        
+            if (ingredientIsInBoard && isCooked)
+            {
+                text += "+";
+            }
+
+            text += " - ";
+            Debug.Log(text);
+        }
     }
 
     private bool CanBeFulfilled()

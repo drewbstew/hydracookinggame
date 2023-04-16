@@ -24,7 +24,7 @@ public class HydraHead : MonoBehaviour
     public void MoveHead(Vector2 direction)
     {
         rigidbody.AddForce(direction);
-         bool headFlipped = false;
+        bool headFlipped = false;
         if (direction.x > 0 && direction.magnitude > 0.1)
         {
             headFlipped = true;
