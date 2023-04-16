@@ -7,11 +7,8 @@ public class HydraHead : MonoBehaviour
 {
     [SerializeField] private SpriteShapeController spriteShapeController;
     [SerializeField] private Transform  headOrigin;
-<<<<<<< Updated upstream
     [SerializeField] private SpriteRenderer headVisuals;
-=======
     [SerializeField] private AudioClip grabbingSound;
->>>>>>> Stashed changes
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;

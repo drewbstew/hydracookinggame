@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4020258815248516687}
+  - component: {fileID: 4020258815248516659}
   - component: {fileID: 4020258815248516684}
   - component: {fileID: 4020258815248516657}
   - component: {fileID: 4020258815248516656}
-  - component: {fileID: 4020258815248516659}
   m_Layer: 0
   m_Name: Delivery Board
   m_TagString: Untagged
@@ -35,6 +35,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4020258815248516659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020258815248516685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5238974142c824581fd8d9d4b87516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 0}
+  orderManager: {fileID: 0}
 --- !u!212 &4020258815248516684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,16 +143,3 @@ CircleCollider2D:
   m_Offset: {x: 0.30733573, y: 0.59224665}
   serializedVersion: 2
   m_Radius: 1.4970893
---- !u!114 &4020258815248516659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4020258815248516685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5238974142c824581fd8d9d4b87516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderManager: {fileID: 0}

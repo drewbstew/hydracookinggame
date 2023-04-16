@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4473199478235234801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NeckOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5218584646716939987}
   - component: {fileID: 1201198044130846861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadVisuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 2356543447884480017}
   - component: {fileID: 2010009010900891704}
   - component: {fileID: 4782415548689071862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 4665026869142558587}
   - component: {fileID: -7280039028437289753}
   - component: {fileID: 7742131031572463280}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 5114508779854955810}
   - component: {fileID: 2314070175103165716}
   - component: {fileID: 5394391696014769417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,6 +458,7 @@ MonoBehaviour:
   spriteShapeController: {fileID: 4782415548689071862}
   headOrigin: {fileID: 4473199478235234801}
   headVisuals: {fileID: 1201198044130846861}
+  grabbingSound: {fileID: 0}
 --- !u!50 &2314070175103165716
 Rigidbody2D:
   serializedVersion: 4
