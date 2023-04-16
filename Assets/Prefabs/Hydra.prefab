@@ -83,6 +83,10 @@ MonoBehaviour:
   - {fileID: 4774641097463534870}
   - {fileID: 210159809354622293}
   - {fileID: 9049246381002144905}
+  grabbingSound:
+  - {fileID: 8300000, guid: 736d05ff4bab2433094deaa101ece340, type: 3}
+  - {fileID: 8300000, guid: 1f618edbfc48548949895c3526ae5b17, type: 3}
+  - {fileID: 8300000, guid: 691fffe2d4f9342cd9fbb60d2aade0ec, type: 3}
 --- !u!1 &7430318276368620491
 GameObject:
   m_ObjectHideFlags: 0

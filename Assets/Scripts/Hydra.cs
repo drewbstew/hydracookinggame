@@ -5,6 +5,7 @@ public class Hydra : MonoBehaviour
 {
     [SerializeField] private PlayerInputManager playerInputManager;
     [SerializeField] private Transform[] playerSpawnPositions;
+    [SerializeField] AudioClip[] grabbingSound;
 
     private int playerNumber;
     
@@ -18,7 +19,7 @@ public class Hydra : MonoBehaviour
         var targetSpawnPosition = playerSpawnPositions[playerNumber];
         var newPlayer = input.GetComponent<PlayerHead>();
 
-        newPlayer.Spawn(targetSpawnPosition);
+        newPlayer.Spawn(targetSpawnPosition, grabbingSound[playerNumber]);
         playerNumber++;
     }
 }
