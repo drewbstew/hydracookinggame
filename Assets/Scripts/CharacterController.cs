@@ -45,6 +45,10 @@ public class CharacterController : MonoBehaviour
             var inputValue = controls.Gameplay.Move.ReadValue<Vector2>();
             hydraHead.MoveHead(inputValue * (Time.deltaTime * movementSpeed));
         }
+        
+        if (controls.Gameplay.GameControl.IsPressed())
+            Application.LoadLevel(Application.loadedLevel);
+
     }
 
     private IEnumerator EnableMovement()
