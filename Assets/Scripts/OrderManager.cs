@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class OrderManager : MonoBehaviour
 {
-    [SerializeField] private List<Order> possibleOrders = new List<Order>();
+    [SerializeField] private List<Food> possibleFoods = new List<Food>();
     
     public Order CurrentOrder { get; private set; }
 
@@ -19,7 +18,8 @@ public class OrderManager : MonoBehaviour
 
     private Order GetRandomOrder()
     {
-        return possibleOrders[Random.Range(0, possibleOrders.Count - 1)];
+        var food = possibleFoods[Random.Range(0, possibleFoods.Count - 1)];
+        return new Order(food);
     }
 
 }

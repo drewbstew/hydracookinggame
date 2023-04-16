@@ -1,9 +1,14 @@
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Order : MonoBehaviour
+public class Order
 {
-    [SerializeField] public Food food;
+    public Food Food => food;
+    private readonly Food food;
+
+    public Order(Food food)
+    {
+        this.food = food;
+    }
 
     public bool CanBeFulfilled(List<Ingredient> ingredients)
     {

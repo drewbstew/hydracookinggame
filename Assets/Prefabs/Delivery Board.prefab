@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4020258815248516684}
   - component: {fileID: 4020258815248516657}
   - component: {fileID: 4020258815248516656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Delivery Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30733573, y: 0.59224665}
+  m_Offset: {x: 0.35, y: 0.92}
   serializedVersion: 2
   m_Radius: 1.4970893

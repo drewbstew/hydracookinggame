@@ -1,14 +1,14 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class DeliveryBoard : MonoBehaviour
 {
     [SerializeField] private TMP_Text textMeshPro; 
     
     public OrderManager orderManager;
-    private readonly List<Ingredient> currentIngredients = new List<Ingredient>();
+    private readonly List<Ingredient> currentIngredients = new();
 
     private void Start()
     {
@@ -25,8 +25,9 @@ public class DeliveryBoard : MonoBehaviour
         }
 
         currentIngredients.Add(ingredient);
-        UpdateUI();
+        CheckIfCanBeFulfilled();
     }
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -37,10 +38,21 @@ public class DeliveryBoard : MonoBehaviour
             return;
         }
 
-        currentIngredients.Remove(ingredient);
-        CanBeFulfilled();
-
+        CheckIfCanBeFulfilled();
+    }
+    
+    private void CheckIfCanBeFulfilled()
+    {
+        if (CanBeFulfilled())
+        {
+            SpawnReadyOrder();
+        }
         UpdateUI();
+    }
+
+    private void SpawnReadyOrder()
+    {
+        // var food = orderManager.
     }
 
     private void UpdateUI()
@@ -51,7 +63,7 @@ public class DeliveryBoard : MonoBehaviour
         }
         
         textMeshPro.text = "";
-        foreach (var orderIngredient in orderManager.CurrentOrder.food.ingredients)
+        foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
         {
             textMeshPro.text += $"{orderIngredient.ingredientType}";
             var isCooked = false;
