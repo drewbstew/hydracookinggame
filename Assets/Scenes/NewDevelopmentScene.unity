@@ -1728,6 +1728,22 @@ PrefabInstance:
       propertyPath: playerInputManager
       value: 
       objectReference: {fileID: 610729475}
+    - target: {fileID: 5340833602600787774, guid: 66cb823b9f9f240a0bcc1803bd4786fb, type: 3}
+      propertyPath: headSprite.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340833602600787774, guid: 66cb823b9f9f240a0bcc1803bd4786fb, type: 3}
+      propertyPath: headSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 518426e4fefb2c64bb5ee280c1fe84c6, type: 3}
+    - target: {fileID: 5340833602600787774, guid: 66cb823b9f9f240a0bcc1803bd4786fb, type: 3}
+      propertyPath: headSprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c0eecd38f49bfe4d99e920c052b863f, type: 3}
+    - target: {fileID: 5340833602600787774, guid: 66cb823b9f9f240a0bcc1803bd4786fb, type: 3}
+      propertyPath: headSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 23684166613435c4a96a622aa910e63a, type: 3}
     - target: {fileID: 6937814627488229944, guid: 66cb823b9f9f240a0bcc1803bd4786fb, type: 3}
       propertyPath: m_Name
       value: Hydra
