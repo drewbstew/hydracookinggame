@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientType: 4
-  requiresCooking: 0
+  requiresCooking: 1
   isCooked: 0
   cookedVisual: {fileID: 83760471393909234}
   rawVisual: {fileID: 6862005844131377807}

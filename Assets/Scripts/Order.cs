@@ -13,24 +13,24 @@ public class Order
 
     public bool CanBeFulfilled(List<Ingredient> ingredients)
     {
-        if (ingredients.Count != food.ingredients.Count)
+        if (ingredients.Count < food.ingredients.Count)
         {
             return false;
         }
-        
-        
-        foreach (var deliverIngredient in ingredients)
+
+        foreach (var foodIngredient in food.ingredients)
         {
-            if (!deliverIngredient.isCooked && deliverIngredient.requiresCooking)
+            var foundIngredient = ingredients.Find(ingredient => ingredient.ingredientType == foodIngredient.ingredientType);
+            if (!foundIngredient)
             {
                 return false;
             }
 
-            var deliveredIngredientExists = food.ingredients.Exists(foodIngredient => foodIngredient.ingredientType == deliverIngredient.ingredientType);
-            if (!deliveredIngredientExists)
+            if (foundIngredient.requiresCooking && !foundIngredient.isCooked)
             {
                 return false;
             }
+            
         }
 
         return true;
