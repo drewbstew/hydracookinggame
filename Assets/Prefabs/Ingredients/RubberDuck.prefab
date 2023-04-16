@@ -134,8 +134,8 @@ MonoBehaviour:
   ingredientType: 5
   requiresCooking: 0
   isCooked: 0
-  cookedVisual: {fileID: 0}
-  rawVisual: {fileID: 0}
+  cookedVisual: {fileID: 4987486702189620769}
+  rawVisual: {fileID: 4987486702189620769}
 --- !u!61 &7567512321057636878
 BoxCollider2D:
   m_ObjectHideFlags: 0

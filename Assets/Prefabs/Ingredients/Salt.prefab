@@ -97,8 +97,8 @@ MonoBehaviour:
   ingredientType: 5
   requiresCooking: 0
   isCooked: 0
-  cookedVisual: {fileID: 0}
-  rawVisual: {fileID: 0}
+  cookedVisual: {fileID: 4788355484687453349}
+  rawVisual: {fileID: 4788355484687453349}
 --- !u!1 &4788355484687453349
 GameObject:
   m_ObjectHideFlags: 0
