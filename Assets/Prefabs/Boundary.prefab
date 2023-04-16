@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6031634120187153574}
   - component: {fileID: 5970801779513769172}
   - component: {fileID: 191481665587806144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5944144108174987089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.27, y: -0.5314, z: 0}
-  m_LocalScale: {x: 1, y: 11.443023, z: 1}
+  m_LocalScale: {x: 1, y: 13.445551, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b67f7672f180449a6e129e8609f5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 0}
+  coll: {fileID: 191481665587806144}
 --- !u!61 &191481665587806144
 BoxCollider2D:
   m_ObjectHideFlags: 0
