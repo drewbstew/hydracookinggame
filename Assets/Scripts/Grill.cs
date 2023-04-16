@@ -31,14 +31,14 @@ public class Grill : MonoBehaviour
 
     void GrillCheckAndFire(GameObject gameObject)
     {
-        var cooked_vis = gameObject.transform.Find("Patty Visuals Cooked").GetComponent<SpriteRenderer>();
-        var raw_vis = gameObject.transform.Find("Patty Visuals Raw").GetComponent<SpriteRenderer>();
+        var cooked_vis = gameObject.transform.Find("Patty Visuals Cooked").gameObject;
+        var raw_vis = gameObject.transform.Find("Patty Visuals Raw").gameObject;
 
-        if (raw_vis.enabled == true)
+        if (raw_vis)
         {
             //Debug.Log("GRILL TIME");
-            cooked_vis.enabled = true;
-            raw_vis.enabled = false;
+            cooked_vis.SetActive(true);
+            raw_vis.SetActive(false);
         }
     }
 
