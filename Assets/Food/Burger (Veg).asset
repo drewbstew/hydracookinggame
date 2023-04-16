@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 122993187459595953, guid: 2d70b1959909440f8aafe12a91bbd818, type: 3}
   - {fileID: 1938667699619474976, guid: 664a94df5550c48ee840aea5026db1c9, type: 3}
   finishedVisuals: {fileID: 21300000, guid: 3751c1269ff15bd44bdbd768b9235502, type: 3}
-  finishedObject: {fileID: 5264519931833902041, guid: 6104330bbf984445da81bee83223ad70, type: 3}
+  readyFood: {fileID: 2046678683682295985, guid: 6104330bbf984445da81bee83223ad70, type: 3}

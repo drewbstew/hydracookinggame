@@ -7,18 +7,11 @@ public class Food : ScriptableObject
 {
     public List<Ingredient> ingredients = new();
     public Sprite finishedVisuals;
-    public SpriteRenderer finishedObject;
-    bool isComplete = false;
+    public ReadyFood readyFood;
 
-    public bool Contains(Ingredient item)
+    public void InstantiateFoodVisuals(Transform instantiatedTransform)
     {
-        return ingredients.Contains(item);
-    }
-
-    public GameObject InstantiateFoodVisuals(Transform instantiatedTransform)
-    {
-        var instantiatedFood = Instantiate(finishedObject, instantiatedTransform.position, Quaternion.identity);
-        instantiatedFood.sprite = finishedVisuals;
-        return instantiatedFood.gameObject;
+        var instantiatedFood = Instantiate(readyFood, instantiatedTransform.position, Quaternion.identity);
+        instantiatedFood.Initialize(this);
     }
 }

@@ -17,6 +17,11 @@ public class OrderManager : MonoBehaviour
         }
     }
 
+    public void GetNewOrder()
+    {
+        CurrentOrder = null;
+    }
+
     private Order GetRandomOrder()
     {
         var food = possibleFoods[Random.Range(0, possibleFoods.Count - 1)];

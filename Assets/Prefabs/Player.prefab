@@ -459,6 +459,7 @@ MonoBehaviour:
   headOrigin: {fileID: 4473199478235234801}
   headVisuals: {fileID: 1201198044130846861}
   grabbingSound: {fileID: 0}
+  headSprite: {fileID: 0}
 --- !u!50 &2314070175103165716
 Rigidbody2D:
   serializedVersion: 4
@@ -490,7 +491,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

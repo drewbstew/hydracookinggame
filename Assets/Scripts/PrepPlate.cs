@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +22,6 @@ public class PrepPlate : MonoBehaviour
         CheckIfCanBeFulfilled();
     }
     
-
     private void OnTriggerExit2D(Collider2D other)
     {
         var ingredient = other.gameObject.GetComponent<Ingredient>();
@@ -63,7 +61,7 @@ public class PrepPlate : MonoBehaviour
         orderManager.CurrentOrder.Food.InstantiateFoodVisuals(spawnPoint);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         foreach (var ingredient in destroyIngredients)
         {
