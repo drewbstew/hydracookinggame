@@ -62,7 +62,7 @@ public class HydraHead : MonoBehaviour
         rigidBodyTransform.parent = transform;
 
         // Play the current player's grabbing sound
-        // AudioSource.PlayClipAtPoint(grabbingSound, transform.position);
+        AudioSource.PlayClipAtPoint(grabbingSound, transform.position);
     }
 
     public void Release()
