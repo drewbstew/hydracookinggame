@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleFoods:
-  - {fileID: 11400000, guid: 03f023f9fec7044489eff744bfd67d60, type: 2}
+  - {fileID: 11400000, guid: 44f3eb785ae674e7eb4cb47435d29f32, type: 2}
+  orderVisualsPivot: {fileID: 0}

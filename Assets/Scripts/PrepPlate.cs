@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class PrepPlate : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     
     private readonly List<Ingredient> currentIngredients = new();
+    private readonly List<Ingredient> destroyIngredients = new();
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,7 +47,28 @@ public class PrepPlate : MonoBehaviour
 
     private void SpawnReadyOrder()
     {
+        foreach (var currentIngredient in currentIngredients)
+        {
+            destroyIngredients.Add(currentIngredient);
+            currentIngredient.gameObject.SetActive(false);
+        }
+
+        foreach (var destroyIngredient in destroyIngredients)
+        {
+            currentIngredients.Remove(destroyIngredient);
+        }
+        
+        destroyIngredients.Clear();
+        
         orderManager.CurrentOrder.Food.InstantiateFoodVisuals(spawnPoint);
+    }
+
+    private void Update()
+    {
+        foreach (var ingredient in destroyIngredients)
+        {
+            Destroy(ingredient);
+        }
     }
 
     private void UpdateUI()
@@ -56,7 +79,7 @@ public class PrepPlate : MonoBehaviour
         }
         
         Debug.Log("-------------------------");
-        var text = "";
+        var text = "\n";
         foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
         {
             text += $"{orderIngredient.ingredientType}";
@@ -78,7 +101,7 @@ public class PrepPlate : MonoBehaviour
                 text += "+";
             }
 
-            text += " - ";
+            text += " \n ";
             Debug.Log(text);
         }
     }
