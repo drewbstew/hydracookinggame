@@ -6,7 +6,6 @@ using System.Collections;
 public class IntroScreen : MonoBehaviour
 {
     public float fadeSpeed = 0.5f; // The speed at which the image will fade in and out
-    public KeyCode skipKey = KeyCode.Space; // The key that the player needs to press to skip the intro screen
 
     [SerializeField] private Image introImage;
 
@@ -19,7 +18,7 @@ public class IntroScreen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(skipKey))
+        if (Input.anyKeyDown)
         {
             StartCoroutine(FadeOut());
         }
