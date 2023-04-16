@@ -13,6 +13,7 @@ public class Grill : MonoBehaviour
         }
         else if (pattyGameObject.GetComponent<Ingredient>().ingredientType == IngredientType.Paddy)
         {
+            //Debug.Log("It's definitely a patty");
             GrillCheckAndFire(pattyGameObject);
         }
     }
@@ -35,9 +36,9 @@ public class Grill : MonoBehaviour
 
         if (raw_vis.enabled == true)
         {
-            Debug.Log("GRILL TIME");
-            raw_vis.enabled = false;
+            //Debug.Log("GRILL TIME");
             cooked_vis.enabled = true;
+            raw_vis.enabled = false;
         }
     }
 

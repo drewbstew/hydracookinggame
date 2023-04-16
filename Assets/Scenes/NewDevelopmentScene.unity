@@ -1659,6 +1659,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751999576}
     m_Modifications:
+    - target: {fileID: 4188282391290295949, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 1865123998}
     - target: {fileID: 7172059414773341417, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1706,10 +1710,6 @@ PrefabInstance:
     - target: {fileID: 7172059414773341423, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
       propertyPath: m_Name
       value: Prep Plate Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 7172059414773341423, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
@@ -2143,14 +2143,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751999576}
     m_Modifications:
-    - target: {fileID: 5925965461475931296, guid: 8633aa6a42296714aa4f68e27ad2dec3, type: 3}
-      propertyPath: m_Radius
-      value: 2.0032735
-      objectReference: {fileID: 0}
-    - target: {fileID: 5925965461475931296, guid: 8633aa6a42296714aa4f68e27ad2dec3, type: 3}
-      propertyPath: m_Offset.y
-      value: 1.0534182
-      objectReference: {fileID: 0}
     - target: {fileID: 5925965461475931298, guid: 8633aa6a42296714aa4f68e27ad2dec3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2208,6 +2200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751999576}
     m_Modifications:
+    - target: {fileID: 4188282391290295949, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 1865123998}
     - target: {fileID: 7172059414773341417, guid: 0b200d421d4f0274c8c6c198df6bdee0, type: 3}
       propertyPath: m_RootOrder
       value: 2
