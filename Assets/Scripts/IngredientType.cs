@@ -3,5 +3,6 @@ public enum IngredientType {
     TopBun,
     BottomBun,
     Ketchup,
-    Paddy
+    Paddy,
+    Other
 }

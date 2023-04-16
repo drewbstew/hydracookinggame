@@ -35,6 +35,7 @@ public class Grill : MonoBehaviour
 
         if (raw_vis.enabled == true)
         {
+            Debug.Log("GRILL TIME");
             raw_vis.enabled = false;
             cooked_vis.enabled = true;
         }
