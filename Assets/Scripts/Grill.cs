@@ -11,7 +11,7 @@ public class Grill : MonoBehaviour
         {
             return;
         }
-        else if (pattyGameObject.GetComponent<Ingredient>().ingredientType == IngredientType.Paddy)
+        else if (pattyGameObject.GetComponent<Ingredient>().ingredientType == IngredientType.Paddy && pattyGameObject.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05f)
         {
             //Debug.Log("It's definitely a patty");
             GrillCheckAndFire(pattyGameObject);
