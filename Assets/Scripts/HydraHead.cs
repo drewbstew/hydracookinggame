@@ -9,6 +9,7 @@ public class HydraHead : MonoBehaviour
     [SerializeField] private Transform  headOrigin;
     [SerializeField] private SpriteRenderer headVisuals;
     [SerializeField] private AudioClip grabbingSound;
+    [SerializeField] private Sprite headSprite; // New serialized field for head sprite asset
     public Vector2 CurrentVelocity => rigidbody.velocity;
 
     private Rigidbody2D rigidbody;
@@ -76,10 +77,12 @@ public class HydraHead : MonoBehaviour
         originalParent = null;
     }
 
-    public void Initialize(AudioClip GrabSound)
+    public void Initialize(AudioClip GrabSound, Sprite headSprite)
     {
         spriteShapeController.spline.SetPosition(1, transform.localPosition);
         spriteShapeController.spline.SetPosition(0, headOrigin.localPosition);
         grabbingSound = GrabSound;
+        this.headSprite = headSprite;
+        headVisuals.sprite = headSprite;
     }
 }
