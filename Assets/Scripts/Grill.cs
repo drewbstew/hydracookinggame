@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grill : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         var pattyGameObject = other.gameObject;
         if (pattyGameObject == null)
         {
