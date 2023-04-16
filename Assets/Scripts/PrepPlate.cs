@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +5,7 @@ public class PrepPlate : MonoBehaviour
 {
     [SerializeField] private OrderManager orderManager;
     [SerializeField] private Transform spawnPoint;
+    
     private readonly List<Ingredient> currentIngredients = new();
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,11 +50,11 @@ public class PrepPlate : MonoBehaviour
 
     private void UpdateUI()
     {
-        // if (orderManager == null)
-        // {
-        //     return;
-        // }
-        //
+        if (orderManager == null)
+        {
+            return;
+        }
+        
         // textMeshPro.text = "";
         // foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
         // {

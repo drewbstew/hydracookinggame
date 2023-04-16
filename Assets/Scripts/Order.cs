@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using UnityEngine;
 
-public class Order
+public class Order: MonoBehaviour
 {
     public Food Food => food;
     private readonly Food food;

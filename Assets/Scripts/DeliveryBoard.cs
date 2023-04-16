@@ -61,7 +61,8 @@ public class DeliveryBoard : MonoBehaviour
         {
             return;
         }
-        
+
+        return;
         textMeshPro.text = "";
         foreach (var orderIngredient in orderManager.CurrentOrder.Food.ingredients)
         {

@@ -4,7 +4,8 @@ using Random = UnityEngine.Random;
 
 public class OrderManager : MonoBehaviour
 {
-    [SerializeField] private List<Food> possibleFoods = new List<Food>();
+    [SerializeField] private List<Food> possibleFoods = new();
+    [SerializeField] private SpriteRenderer orderVisualsPivot;
     
     public Order CurrentOrder { get; private set; }
 
@@ -19,6 +20,7 @@ public class OrderManager : MonoBehaviour
     private Order GetRandomOrder()
     {
         var food = possibleFoods[Random.Range(0, possibleFoods.Count - 1)];
+        orderVisualsPivot.sprite = food.finishedVisuals;
         return new Order(food);
     }
 
