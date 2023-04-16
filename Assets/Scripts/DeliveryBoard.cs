@@ -10,6 +10,11 @@ public class DeliveryBoard : MonoBehaviour
     public OrderManager orderManager;
     private readonly List<Ingredient> currentIngredients = new List<Ingredient>();
 
+    private void Start()
+    {
+        UpdateUI();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         var ingredient = other.gameObject.GetComponent<Ingredient>();
@@ -40,6 +45,11 @@ public class DeliveryBoard : MonoBehaviour
 
     private void UpdateUI()
     {
+        if (orderManager == null)
+        {
+            return;
+        }
+        
         textMeshPro.text = "";
         foreach (var orderIngredient in orderManager.CurrentOrder.food.ingredients)
         {
