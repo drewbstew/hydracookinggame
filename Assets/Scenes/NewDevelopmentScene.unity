@@ -2354,22 +2354,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[1]
-      value: 
-      objectReference: {fileID: 867976214888285063, guid: f497bb6b31d332e4e9deb050d31b5790, type: 3}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[3]
-      value: 
-      objectReference: {fileID: 867976214888285063, guid: d343b9d41902a4c6f9aecc11ec6e699b, type: 3}
-    - target: {fileID: 8747058870179081184, guid: 508fea8c02b7f244590fd58118428606, type: 3}
-      propertyPath: ingredients.Array.data[4]
-      value: 
-      objectReference: {fileID: -3402409118078539664, guid: 6023eddc5455c4eb39a083d5dc1acc6d, type: 3}
     - target: {fileID: 8747058870179081185, guid: 508fea8c02b7f244590fd58118428606, type: 3}
       propertyPath: m_Name
       value: Spawner
