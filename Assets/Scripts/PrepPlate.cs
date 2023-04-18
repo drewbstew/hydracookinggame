@@ -50,12 +50,13 @@ public class PrepPlate : MonoBehaviour
             destroyIngredients.Add(currentIngredient);
             currentIngredient.gameObject.SetActive(false);
         }
+        currentIngredients.Clear();
 
-        foreach (var destroyIngredient in destroyIngredients)
-        {
-            currentIngredients.Remove(destroyIngredient);
-        }
-        
+        // foreach (var destroyIngredient in destroyIngredients)
+        // {
+        //     currentIngredients.Remove(destroyIngredient);
+        // }
+        //
         destroyIngredients.Clear();
         
         orderManager.CurrentOrder.Food.InstantiateFoodVisuals(spawnPoint);
